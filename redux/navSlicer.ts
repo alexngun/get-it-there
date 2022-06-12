@@ -16,7 +16,12 @@ interface placeType {
 interface stateType {
     origin: placeType | null,
     destination: placeType | null,
-    travelTimeInformation: number | null
+    travelTimeInformation: travelType | null
+}
+
+interface travelType {
+    distance: { text: string, value: number },
+    duration: { text: string, value: number },
 }
 
 export const navSlice = createSlice({
@@ -29,7 +34,7 @@ export const navSlice = createSlice({
         setDestination: (state, action: PayloadAction<placeType>) => {
             state.destination = action.payload
         },
-        setTravelTime: (state, action: PayloadAction<number>) => {
+        setTravelTime: (state, action: PayloadAction<travelType>) => {
             state.travelTimeInformation = action.payload
         },
     }
