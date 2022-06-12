@@ -11,6 +11,6 @@ A easy Uber clone implemented with GooglePlacesAutoComplete (search places) & Go
 
 ## Screens
 
-![photo](./img/home.png)
-![photo](./img/search.png)
-![photo](./img/route.png)
+<img src="./img/home.png" height=600>
+<img src="./img/search.png" height=600>
+<img src="./img/route.png" height=600>
