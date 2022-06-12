@@ -6,7 +6,7 @@ import { GOOGLE_MAPS_APIKEY } from "@env"
 import React from 'react'
 import tw from 'tailwind-react-native-classnames'
 import { useDispatch } from 'react-redux'
-import { placeType, setDestination, setOrigin } from '../redux/navSlicer'
+import { setOrigin } from '../redux/navSlicer'
 import NavFavourites from '../components/NavFavourites'
 
 export default function HomeScreen() {

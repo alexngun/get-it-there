@@ -44,7 +44,6 @@ function RideOptionsCard({}: Props) {
   const navigation = useNavigation()
   const [selected, setSelected] = useState<dataType|null>(null)
   const { travelTimeInformation } = useSelector(selectNav)
-  console.log(travelTimeInformation)
 
   return (
     <SafeAreaView style={tw`bg-white flex-grow`}>
@@ -57,7 +56,7 @@ function RideOptionsCard({}: Props) {
         <FlatList
           data={data} keyExtractor={item=>item.id}
           renderItem={ ({item}) => (
-            <TouchableOpacity style={tw`flex-row justify-between items-center px-6 ${item.id == selected?.id && 'bg-gray-200'}`} onPress={()=>setSelected(item)}>
+            <TouchableOpacity style={tw`flex-row justify-between items-center px-3 ${item.id == selected?.id && 'bg-gray-200'}`} onPress={()=>setSelected(item)}>
               <Image
                 style={{
                   width: 90,
@@ -66,7 +65,7 @@ function RideOptionsCard({}: Props) {
                 }}
                 source={{uri:item.image}}
               />
-              <View style={tw`-ml-10`}>
+              <View style={tw`-ml-6`}>
                 <Text style={tw`text-lg font-semibold`}>{item.title}</Text>
                 <Text>{travelTimeInformation?.duration.text} Travel Time</Text>
               </View>
